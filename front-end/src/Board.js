@@ -2,9 +2,11 @@ import React, { useEffect, useState, useRef } from "react";
 import Cell from "./Cell.js";
 export default function Board({ height, width, mines }) {
   const [board, setBoard] = useState([]);
+  const [game, setGame] = useState({});
 
   useEffect(() => {
     setBoard(createBoard);
+    console.log(board);
   }, []);
 
   const createBoard = () => {
